@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startercode</title>
+    <style>
+     p#operationText, p#secondText, p#firstText, p#resultText{
+        display:inline
+     }
+     i#firstNum, s#operation, i#secondNum{
+        padding-left: 20;
+     }
+    </style>
+</head>
+<body>
+    <p id="firstText">First Number:</p>
+    <input type="number"id="firstNum" name="firstNum" placeholder="add your first number"/>
+    <br>
+    <p id="operationText">Operation</p>
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <br>
+    <p id="secondText">Second Number:</p>
+    <input type="number"id="secondNum" name="secondNum" placeholder="add your second number"/>
+    <br>
+    <button id="calculate">calculate</button>
+    <br>
+    <p id="resultText">Result: </p>
+    <p id="result"></p>
+
+    <script src="./src/index.ts" type="module"></script>
+</body>
+</html>

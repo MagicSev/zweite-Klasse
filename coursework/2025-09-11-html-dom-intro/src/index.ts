@@ -1,3 +1,20 @@
-const helloWorldHeader = document.getElementById("helloWorldHeader") as HTMLHeadingElement;
+const increaseButton = document.getElementById('countUp') as HTMLButtonElement;
+const counter = document.getElementById('counter') as HTMLParagraphElement;
+const decreaseButton = document.getElementById('countDown') as HTMLButtonElement;
+let clickCount = 0;
+increaseButton.addEventListener('click', () => {
+  clickCount++;
+  counter.textContent = `${clickCount}`;
+  if (clickCount >= 0) {
+    counter.style.color = 'black';
+  }
+});
 
-helloWorldHeader.innerText += "!";
+
+decreaseButton.addEventListener('click', () => {
+  clickCount--;
+  counter.textContent = `${clickCount}`;
+  if (clickCount < 0) {
+    counter.style.color = 'red';
+  }
+});

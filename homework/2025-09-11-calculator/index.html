@@ -5,15 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startercode</title>
     <style>
-     p#operationText, p#secondText, p#firstText, p#resultText{
-        display:inline
-     }
-     i#firstNum, s#operation, i#secondNum{
-        padding-left: 20;
-     }
+        p{
+            display:inline;
+            margin:5px
+        }
+        input,button,select{
+            padding: 5px;
+            margin:5px;
+        }
+        button{
+            margin-left:90px;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        h1{
+            font: size 25px;
+            margin-left:50px;
+        }
+        #firstNum{
+            margin-left:22px;
+        }
+        #operation{
+            margin-left:48px;
+        }
+        
     </style>
 </head>
 <body>
+    <h1>Simple Calculator</h1>
+    <br>
     <p id="firstText">First Number:</p>
     <input type="number"id="firstNum" name="firstNum" placeholder="add your first number"/>
     <br>

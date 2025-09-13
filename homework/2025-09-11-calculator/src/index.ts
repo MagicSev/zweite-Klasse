@@ -18,9 +18,9 @@ calculate.addEventListener('click', () => {
         result.textContent = "You can't divide by Zero!";
         return;
       }
-      result.textContent = String(parseInt(firstNum.value) / parseInt(secondNum.value));
+      result.textContent = `${String(parseInt(firstNum.value) / parseInt(secondNum.value))}`;
     }
   }else{
-    result.textContent = "Please fill in the numbers!";
+    result.textContent = "Please fill in the numbenrs!";
   }
 });

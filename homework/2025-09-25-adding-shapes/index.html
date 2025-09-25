@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Startercode</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SVG Shape Generator</h1>
+    <div id="controls">
+      <label for="select">Shape Type:</label>
+      <select id="select">
+        <option value="circle">circle</option>
+        <option value="rectangle">rectangle</option>
+      </select>
+      <br /><br />
+      <button id="add">add Shape</button>
+      <br /><br />
+      <button id="clear">clear All</button>
+    </div>
+    <svg id="svg" width="600" height="400"></svg>
+    <script src="./src/index.ts" type="module"></script>
+  </body>
+</html>

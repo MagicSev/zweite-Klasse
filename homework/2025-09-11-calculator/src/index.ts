@@ -21,6 +21,6 @@ calculate.addEventListener('click', () => {
       result.textContent = `${String(parseInt(firstNum.value) / parseInt(secondNum.value))}`;
     }
   }else{
-    result.textContent = "Please fill in the numbenrs!";
+    result.textContent = "Please fill in the numbers!";
   }
 });

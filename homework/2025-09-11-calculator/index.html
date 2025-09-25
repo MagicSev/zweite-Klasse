@@ -18,7 +18,7 @@
             
         }
         button{
-            margin-left:90px;
+            margin-left: 90px;
             padding-left: 3%;
             padding-right: 3%;
         }
@@ -46,10 +46,10 @@
 <body>
     <h1>Simple Calculator</h1>
     <br>
-    <label id="firstText">First Number:</label>
+    <label id="firstText" for="firstNum">First Number:</label>
     <input type="number"id="firstNum" name="firstNum" placeholder="add your first number"/>
     <br>
-    <label id="operationText">Operation:</label>
+    <label id="operationText" for="operation">Operation:</label>
     <select id="operation">
         <option value="+">+</option>
         <option value="-">-</option>
@@ -57,12 +57,12 @@
         <option value="/">/</option>
     </select>
     <br>
-    <label id="secondText">Second Number:</label>
+    <label id="secondText" for="secondNum">Second Number:</label>
     <input type="number"id="secondNum" name="secondNum" placeholder="add your second number"/>
     <br>
     <button id="calculate">calculate</button>
     <br>
-    <label>result:</label>
+    <label for="result">result:</label>
     <label id="result"></label>
  
 

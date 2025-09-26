@@ -2,10 +2,13 @@ const select = document.getElementById('select') as HTMLSelectElement;
 const add = document.getElementById('add') as HTMLButtonElement;
 const clear = document.getElementById('clear') as HTMLButtonElement;
 const svg = document.getElementById('svg') as unknown as SVGSVGElement;
+const counter = document.getElementById("counter") as HTMLLabelElement;
 const WIDTH = 600;
 const HEIGHT = 400;
-
+let count =0;
 add.addEventListener('click', () => {
+  count++
+  counter.textContent = String(count);
   if (select.value === 'circle') {
     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle') as SVGCircleElement;
     const r = (Math.random() * 40) +10
@@ -35,4 +38,7 @@ add.addEventListener('click', () => {
 });
 clear.addEventListener("click",()=>{
     svg.innerHTML = ''; 
+    count = 0;
+    counter.textContent = String(count);
+
 })

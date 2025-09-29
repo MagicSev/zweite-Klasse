@@ -26,3 +26,4 @@ for (let i = 0; i < monthlyTemps.length; i++) {
   rectangle.setAttribute('height', `${(monthlyTemps[i] * 200) / 25}`);
   svg.appendChild(rectangle);
 }
+

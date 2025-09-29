@@ -24,9 +24,9 @@ add.addEventListener('click', () => {
     const rectangle = document.createElementNS('http://www.w3.org/2000/svg', 'rect') as SVGRectElement;
     const rwidth = Math.random() * 80 +20;
     const rheight = Math.random() * 60 +20;
-    const red = `${Math.random()*255}`;
-    const green = `${Math.random()*255}`;
-    const blue = `${Math.random()*255}`;
+    const red = `${Math.random()*256}`;
+    const green = `${Math.random()*256}`;
+    const blue = `${Math.random()*256}`;
 
     rectangle.setAttribute('fill', `rgb(${red},${green},${blue})`);
     rectangle.setAttribute('x', `${Math.random() * (WIDTH-rwidth)}`);

@@ -48,6 +48,23 @@ add.addEventListener('click', () => {
     triangle.setAttribute("points", `${x1},${y1} ${x2},${y2} ${x3},${y3}`)
     triangle.setAttribute("fill", `rgb(${red},${green},${blue})`);
     svg.appendChild(triangle)
+  }else if(select.value ==="ellipse"){
+        const ellipse = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse') as SVGEllipseElement;
+        const rx = Math.random()*40 +10
+        const ry = Math.random()*40 +10
+        const cx = Math.random()*(WIDTH - rx*2) + rx
+        const cy = Math.random()*(HEIGHT - ry*2) +ry
+      const red = `${Math.random()*256}`;
+    const green = `${Math.random()*256}`;
+    const blue = `${Math.random()*256}`;
+    ellipse.setAttribute("cx", `${cx}`)
+    ellipse.setAttribute("cy", `${cy}`)
+    ellipse.setAttribute("rx", `${rx}`)
+    ellipse.setAttribute("ry", `${ry}`)
+    ellipse.setAttribute("fill", `rgb(${red},${green},${blue})`);
+    svg.appendChild(ellipse)
+
+
   }
 });
 clear.addEventListener("click",()=>{
@@ -57,8 +74,7 @@ clear.addEventListener("click",()=>{
 
 })
 svg.addEventListener("click", (event)=>{
-  console.log(event.target.tagName)
-  if(event.target.tagName === "circle"||event.target.tagName==="rect"|| event.target.tagName ==="polygon"){
+  if(event.target.tagName === "circle"||event.target.tagName==="rect"|| event.target.tagName ==="polygon"|| event.target.tagName ==="ellipse"){
     event.target.remove();
     count--
     counter.textContent = `${count}`

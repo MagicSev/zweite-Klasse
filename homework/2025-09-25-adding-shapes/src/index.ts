@@ -34,6 +34,20 @@ add.addEventListener('click', () => {
     rectangle.setAttribute('width', `${rwidth}`);
     rectangle.setAttribute('height', `${rheight}`);
     svg.appendChild(rectangle);
+  }else if(select.value ==="triangle"){
+    const triangle = document.createElementNS('http://www.w3.org/2000/svg', 'polygon') as SVGPolygonElement;
+    const x1 = Math.random()*WIDTH
+    const y1 = Math.random()*HEIGHT
+    const x2 = Math.random()*WIDTH
+    const y2 = Math.random()*HEIGHT
+    const x3 = Math.random()*WIDTH
+    const y3 = Math.random()*HEIGHT
+     const red = `${Math.random()*256}`;
+    const green = `${Math.random()*256}`;
+    const blue = `${Math.random()*256}`;
+    triangle.setAttribute("points", `${x1},${y1} ${x2},${y2} ${x3},${y3}`)
+    triangle.setAttribute("fill", `rgb(${red},${green},${blue})`);
+    svg.appendChild(triangle)
   }
 });
 clear.addEventListener("click",()=>{
@@ -44,7 +58,7 @@ clear.addEventListener("click",()=>{
 })
 svg.addEventListener("click", (event)=>{
   console.log(event.target.tagName)
-  if(event.target.tagName === "circle"||event.target.tagName==="rect"){
+  if(event.target.tagName === "circle"||event.target.tagName==="rect"|| event.target.tagName ==="polygon"){
     event.target.remove();
     count--
     counter.textContent = `${count}`

@@ -18,7 +18,7 @@ add.addEventListener('click', () => {
     circle.setAttribute('fill', `rgb(${red},${green},${blue})`);
     circle.setAttribute('cx', `${Math.random() * (WIDTH-r*2)+r}`);
     circle.setAttribute('cy', `${Math.random() * (HEIGHT-r*2)+r}`);
-    circle.setAttribute('r', String(r));
+    circle.setAttribute('r', `${r}`);
     svg.appendChild(circle);
   } else if (select.value === 'rectangle') {
     const rectangle = document.createElementNS('http://www.w3.org/2000/svg', 'rect') as SVGRectElement;
@@ -31,14 +31,22 @@ add.addEventListener('click', () => {
     rectangle.setAttribute('fill', `rgb(${red},${green},${blue})`);
     rectangle.setAttribute('x', `${Math.random() * (WIDTH-rwidth)}`);
     rectangle.setAttribute('y', `${Math.random() * (HEIGHT-rheight)}`);
-    rectangle.setAttribute('width', String(rwidth));
-    rectangle.setAttribute('height', String(rheight));
+    rectangle.setAttribute('width', `${rwidth}`);
+    rectangle.setAttribute('height', `${rheight}`);
     svg.appendChild(rectangle);
   }
 });
 clear.addEventListener("click",()=>{
     svg.innerHTML = ''; 
     count = 0;
-    counter.textContent = String(count);
+    counter.textContent = `${count}`;
 
+})
+svg.addEventListener("click", (event)=>{
+  console.log(event.target.tagName)
+  if(event.target.tagName === "circle"||event.target.tagName==="rect"){
+    event.target.remove();
+    count--
+    counter.textContent = `${count}`
+  }
 })

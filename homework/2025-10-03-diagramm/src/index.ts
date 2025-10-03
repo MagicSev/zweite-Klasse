@@ -29,8 +29,8 @@ button.addEventListener("click", ()=>{
     }
     svg.innerHTML = "";
     for(let i = 0; i<MONTHS;i++){
-    const val = parseInt(months[i].value);
         if (months[i].value !== "") {
+            const val = parseInt(months[i].value);
             const margin = height/maxvalue
             const barHeight = val *margin
             const y = height - barHeight;

@@ -10,7 +10,7 @@ let mouseY: number;
 svg.addEventListener('click', () => {
   drawing = !drawing;
   if (drawing) {
-    interval = setInterval(draw, 1000 / 120);
+    interval = setInterval(draw, 1000 / 60);
   } else {
     clearInterval(interval);
   }

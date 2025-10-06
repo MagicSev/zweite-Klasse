@@ -16,10 +16,10 @@ const months = [
   document.getElementById('month11') as HTMLInputElement,
   document.getElementById('month12') as HTMLInputElement,
 ];
-
+const barwidth = 1000/12;
 const width = 1200;
-const height = 600;
-const barwidth = 100;
+const height = 500;
+drawLines();
 button.addEventListener('click', () => {
   let maxvalue = 0;
   for (let i = 0; i < MONTHS; i++) {
@@ -28,12 +28,13 @@ button.addEventListener('click', () => {
     }
   }
   svg.innerHTML = '';
+  drawLines();
   for (let i = 0; i < MONTHS; i++) {
     if (months[i].value !== '') {
       const val = parseInt(months[i].value);
       const margin = height / maxvalue;
       const barHeight = val * margin;
-      const y = height - barHeight;
+      const y = height - barHeight+100;
       const rectangle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
       if(parseInt(threshold.value)>val){
         rectangle.setAttribute('fill', 'green');
@@ -47,5 +48,34 @@ button.addEventListener('click', () => {
 
       svg.appendChild(rectangle);
     }
+
   }
 });
+function drawLines(){
+const line = document.createElementNS("http://www.w3.org/2000/svg","line") as SVGLineElement;
+line.setAttribute("x1","0");
+line.setAttribute("y1","0");
+line.setAttribute("x2", "0");
+line.setAttribute("y2","600");
+line.setAttribute("stroke", "black");
+line.setAttribute("stroke-width", "2");
+svg.appendChild(line);
+const line1 = document.createElementNS("http://www.w3.org/2000/svg","line") as SVGLineElement;
+line1.setAttribute("x1", "0");
+line1.setAttribute("y1", "600");
+line1.setAttribute("x2", "1000");
+line1.setAttribute("y2", "600");
+line1.setAttribute("stroke", "black");
+line1.setAttribute("stroke-width", "2");
+svg.appendChild(line1)
+    for(let i = 0; i<months.length;i++){
+      const line2 = document.createElementNS("http://www.w3.org/2000/svg","line") as SVGLineElement;
+      line2.setAttribute("x1",`${i*barwidth-5}`);
+      line2.setAttribute("y1", "595");
+      line2.setAttribute("x2", `${i*barwidth-5}`);
+      line2.setAttribute("y2", "600");
+      line2.setAttribute("stroke", "black");
+      line2.setAttribute("stroke-width", "2");
+      svg.appendChild(line2)
+    }
+}

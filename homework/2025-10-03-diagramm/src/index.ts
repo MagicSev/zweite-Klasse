@@ -1,5 +1,6 @@
 const svg = document.getElementById('svg') as unknown as SVGElement;
 const button = document.getElementById('generate') as HTMLButtonElement;
+const threshold = document.getElementById("threshold") as HTMLInputElement;
 const MONTHS = 12;
 const months = [
   document.getElementById('month1') as HTMLInputElement,
@@ -33,13 +34,16 @@ button.addEventListener('click', () => {
       const margin = height / maxvalue;
       const barHeight = val * margin;
       const y = height - barHeight;
-
       const rectangle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      if(parseInt(threshold.value)>val){
+        rectangle.setAttribute('fill', 'green');
+      }else{
+        rectangle.setAttribute('fill', 'red');
+      }
       rectangle.setAttribute('x', `${barwidth * i}`);
       rectangle.setAttribute('y', `${y}`);
       rectangle.setAttribute('width', `${barwidth - 10}`);
       rectangle.setAttribute('height', `${barHeight}`);
-      rectangle.setAttribute('fill', 'steelblue');
 
       svg.appendChild(rectangle);
     }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polygon Selector</title>
+    <style>
+      body {
+        font-family: arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-family: arial, sans-serif">Polygon Selector</h1>
+    <svg id="svg" width="400" height="400" style="border: 2px solid black"></svg>
+    <br />
+    <label for="sideSelector">Amount of sides:</label>
+    <input id="sideSelector" placeholder="integer ≥ 3" type="number" />
+    <button id="generate">generate shape</button>
+    <script src="./src/index.ts" type="module"></script>
+  </body>
+</html>

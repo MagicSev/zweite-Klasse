@@ -2,7 +2,7 @@ body{
     background-color:rgb(152, 200, 255);
     text-align:center;
     font-family:arial, sans-serif;
-    color:#310092
+    color:#732dff
 }
 #wheaterApp{
     background-color:white;
@@ -20,13 +20,30 @@ body{
 
     margin-left:20px;
     width:560px;
-    height:250px;
+    height:200px;
     border-radius:15px;
     color:white;
 }
 #subtitle{
     padding-top:2rem;   
+    font-weight:bold;
 }
 #degrees{
-    font-size:15;
+    font-size:20px;
+    font-weight:bold;
+    }#sunny{
+    display: inline;
+    background:orange;
+    padding:7px;
+    border-radius:15px;
+    color:black;
+}
+#wheateralert{
+    margin-left: 20px;
+    margin-top:20px;
+    width:560px;
+    height:50px;
+    border-radius:15px;
+    border-left-color:orange;
+    background:rgba(255, 166, 0, 0.274);
 }

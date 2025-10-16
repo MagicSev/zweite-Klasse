@@ -1,0 +1,32 @@
+body{
+    background-color:rgb(152, 200, 255);
+    text-align:center;
+    font-family:arial, sans-serif;
+    color:#310092
+}
+#wheaterApp{
+    background-color:white;
+    width:600px;
+    height:650px;
+    border-radius:15px;
+}
+#title{
+    position:relative;
+    padding-top:3rem
+}
+#wheater{
+    position:relative;
+    background-color:blue;
+
+    margin-left:20px;
+    width:560px;
+    height:250px;
+    border-radius:15px;
+    color:white;
+}
+#subtitle{
+    padding-top:2rem;   
+}
+#degrees{
+    font-size:15;
+}

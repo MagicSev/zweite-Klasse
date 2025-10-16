@@ -1,0 +1,37 @@
+body{
+font-family: "Arial Narrow", Arial, sans-serif;    font-size: 1.3rem;
+    margin-left: 5rem;
+    background-color:rgb(234, 250, 255);
+}
+h5{
+    color:#707070;
+    font-weight: normal;
+}
+p:not(.summary){
+    margin-left: 5rem;
+}
+.summary{
+    font-weight:bold;
+}
+.subtitle{
+    margin-left:5rem;
+}
+.img{
+    margin-left:-4rem;
+}
+div{
+    position: relative; 
+    background-color:white;
+    margin-top:-7rem;
+    width:730px;
+    padding:10px;
+}
+#firstpic{
+ height:350px;
+ width:875px;
+}
+#secondpic{
+    height:492,1875px;
+    width:875px;
+}
+

@@ -7,7 +7,7 @@ body{
 #wheaterApp{
     background-color:white;
     width:600px;
-    height:650px;
+    height:1000px;
     border-radius:15px;
 }
 #title{
@@ -44,6 +44,28 @@ body{
     width:560px;
     height:50px;
     border-radius:15px;
-    border-left-color:orange;
+    border-left: 4px solid rgb(255, 115, 0);
     background:rgba(255, 166, 0, 0.274);
+}
+#wheateralerttext{
+    color:rgb(134, 60, 0);
+    font-size:small;
+    padding-top: 15px
+}span{
+    font-weight:bold;
+}
+h3{
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 6px; /* adds space between text and border */
+  border-bottom: 2px solid blue;
+}
+.days{
+    background-color:black
+}
+#week{
+    margin-left:20px;
+    background-color:black;
+    width:560px;
+    height:250px
 }

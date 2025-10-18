@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Startercode</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="wheaterApp">
-        <h2 id="title">🌥️Wheater Dashboard</h2>
-        <div id="wheater">
-            <p id="subtitle">Current Wheater in Vienna</p>
-            <p id="degrees">22°C</p>
-            <p id="sunny">Sunny</p>
-            <p id="humidity">Humidity: 65% | Wind: 12km/h</p>
+      <h2 id="title">🌥️Wheater Dashboard</h2>
+      <div id="currentwheater">
+        <p id="headingforcurrentwheater">Current Wheater in Vienna</p>
+        <p id="currentdegrees">22°C</p>
+        <p id="currentstatus">Sunny</p>
+        <p>Humidity: 65% | Wind: 12km/h</p>
+      </div>
+      <div id="wheateralert">
+        <p id="wheateralerttext"><span>Wheater Alert:</span> High UV index expected today. Please wear sunscreen if going outside.</p>
+      </div>
+      <h3 class="subtitle">5-ay Forecast</h3>
+      <div id="week">
+        <div class="days" id="monday">
+          <h3 class="titlefordays">Monday</h3>
+          <div class="smiley">☀️</div>
+          <div class="max">25°C</div>
+          <div class="min">15°C</div>
         </div>
-        <div id="wheateralert">
-            <p id="wheateralerttext"><span>Wheater Alert:</span> High UV index expected today. Please wear sunscreen if going outside.</p>
+        <div class="days" id="tuesday">
+          <h3 class="titlefordays">Tuesday</h3>
+          <div class="smiley">🌧️</div>
+          <div class="max">18°C</div>
+          <div class="min">12°C</div>
         </div>
-        <h3>5-day Forecast</h3>
-        <div id="week">
-            <div class ="days" id="monday">
-                
-            </div>
-            <div class ="days" id="tuesday">
-
-            </div>
-            <div class ="days" id="wednesday">
-
-            </div>
-            <div class ="days" id="thursday">
-
-            </div>
-            <div class ="days" id="friday">
-
-            </div>
-            <div class ="days" id="saturday">
-
-            </div>
-            <div class ="days" id="sunday">
-
-            </div>
+        <div class="days" id="wednesday">
+          <h3 class="titlefordays">Wednesday</h3>
+          <div class="smiley">☁️</div>
+          <div class="max">20°C</div>
+          <div class="min">14°C</div>
         </div>
+        <div class="days" id="thursday">
+          <h3 class="titlefordays">Thursday</h3>
+          <div class="smiley">⛅</div>
+          <div class="max">23°C</div>
+          <div class="min">16°C</div>
+        </div>
+        <div class="days" id="friday">
+          <h3 class="titlefordays">Friday</h3>
+          <div class="smiley">⛈️</div>
+          <div class="max">17°C</div>
+          <div class="min">11°C</div>
+        </div>
+      </div>
+      <h3 class="subtitle">Wheater Statistics</h3>
+      <div id="statisticscontainer">
+        <div class="statistic" id="avgtemp">
+            <h3 class="titleforstatistics"> AVERAGE TEMPERATURE</h3>
+            <div class="statisticnumber" id="degrees">21°C</div>
+        </div>
+        <div class="statistic" id="rainfall">
+            <h3 class="titleforstatistics"> RAINFALL THIS WEEK</h3>
+            <div class="statisticnumber" id="rainfall">12mm</div>
+
+        </div>
+        <div class="statistic" id="windspeed">
+            <h3 class="titleforstatistics"> WIND SPEED</h3>
+            <div class="statisticnumber" id="windspeed">15km/h</div>
+
+        </div>
+
+      </div>
     </div>
     <script src="./src/index.ts" type="module"></script>
-</body>
+  </body>
 </html>

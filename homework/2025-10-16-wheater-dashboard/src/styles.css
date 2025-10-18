@@ -7,31 +7,31 @@ body{
 #wheaterApp{
     background-color:white;
     width:600px;
-    height:1000px;
+    height:760px;
     border-radius:15px;
 }
 #title{
     position:relative;
     padding-top:3rem
 }
-#wheater{
+#currentwheater{
     position:relative;
-    background-color:blue;
-
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     margin-left:20px;
     width:560px;
     height:200px;
     border-radius:15px;
     color:white;
 }
-#subtitle{
+#headingforcurrentwheater{
     padding-top:2rem;   
     font-weight:bold;
 }
-#degrees{
+#currentdegrees{
     font-size:20px;
     font-weight:bold;
-    }#sunny{
+    }
+#currentstatus{
     display: inline;
     background:orange;
     padding:7px;
@@ -54,18 +54,100 @@ body{
 }span{
     font-weight:bold;
 }
-h3{
-  text-align: left;
-  padding-left: 20px;
-  padding-bottom: 6px; /* adds space between text and border */
-  border-bottom: 2px solid blue;
-}
 .days{
-    background-color:black
+  display: inline-block;
+  width: 98px;
+  height: 150px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius:15px;
 }
 #week{
-    margin-left:20px;
-    background-color:black;
+    background-color:rgb(255, 255, 255);
     width:560px;
-    height:250px
+    height:150px;
+    margin-left:20px
+}
+#monday{
+    background:orange;
+   color:rgb(134, 60, 0);
+}
+#tuesday{
+    background:rgb(73, 73, 255);
+    color:white;
+}
+#wednesday{
+    background:rgb(147, 147, 147);
+    color:rgb(10, 0, 39)
+}
+#thursday{
+    background:rgb(64, 170, 205);
+    color:white;
+
+}
+#friday{
+    background:rgb(87, 87, 87);
+    color:white;
+
+}
+.titlefordays{
+    line-height:normal;
+    margin-top:none;
+    font-size:14px;
+    text-align:center;
+    border-bottom:none;
+    font:bold;
+
+}
+.smiley{
+    text-align:center;
+    font-size:30px
+}
+.max{
+    text-align:center;
+    color:red;
+    font-size:20px;
+}
+.min{
+    text-align:center;
+    color:blue;
+    font-size:20px;
+}
+.subtitle{
+    text-align:left;
+      padding-left: 20px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid blue;
+}
+#statisticscontainer{
+    width:560px;
+    height:75px;
+    margin-left:20px;
+}
+.statistic{
+    border: 2px solid rgba(125, 125, 125, 0.447);
+    display:inline-block;
+    margin-left:7px;
+    width:172px;
+    height:75px;
+    border-radius:15px;
+    background-color:lightgray;
+    
+}
+.titleforstatistics{
+    color:rgba(125, 125, 125, 0.769);
+    font-size:13px;
+}
+.statisticnumber{   
+    font:bold;
+}
+#degrees{
+color:red;
+}
+#windspeed{
+    color:black;
+}
+#rainfall{
+    
+    color:black;
 }

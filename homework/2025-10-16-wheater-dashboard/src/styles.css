@@ -9,6 +9,10 @@ body{
     width:600px;
     height:760px;
     border-radius:15px;
+    margin: 0 auto; 
+    zoom: 1.5;
+
+
 }
 #title{
     position:relative;
@@ -150,4 +154,10 @@ color:red;
 #rainfall{
     
     color:black;
+}
+/* kopiert von musterlösung */
+.days:hover{
+      transform: translateY(-5px);
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+      cursor: pointer;
 }

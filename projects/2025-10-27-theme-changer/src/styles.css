@@ -1,0 +1,17 @@
+body{
+font-family: arial,sans-serif;
+}
+a{
+    float:right ;
+    color:rgb(255, 255, 255);
+    padding:10px;
+    background: rgb(50, 50, 50);
+    border-radius:15px;
+    text-decoration: none;
+}
+a:hover{
+    background-color:rgb(40,40,40);
+}
+a:active{
+    background-color:rgb(30,30,30)
+}

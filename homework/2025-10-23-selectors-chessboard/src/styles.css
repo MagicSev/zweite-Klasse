@@ -1,0 +1,40 @@
+.square {
+    width: 20px;
+    height: 20px;
+}
+
+.square.light {
+    background-color: bisque;
+}
+
+.square.dark {
+    background-color: brown;
+}
+
+.row-label {
+    width: 40px;
+    height: 20px;
+    margin-right:5px;
+    display: flex;           /* ✅ Add this */
+    align-items: center;     /* ✅ Works now */
+    justify-content: flex-end; /* optional: keeps text on the right */
+}   
+
+.column-label {
+    margin-top:3px;
+    width: 20px;
+    height: 20px;
+    display: flex;           /* ✅ Add this */
+    align-items: flex-start;     /* ✅ Works now */
+    justify-content: center; /* optional: keeps text on the right */
+
+}
+/* ✅ This is the key fix */    
+.board-row,.column-labels {
+    display: flex;
+    flex-direction:row;
+}
+#chessboard{
+        font-size:0.75rem;
+
+}

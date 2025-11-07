@@ -2,7 +2,6 @@ import "./styles.css";
 
 type Player = "red" | "yellow";
 type Cellstate = Player | "empty";
-
 class ConnectFourGame {
     private boardElement: HTMLDivElement;
     private currentPlayer: Player = "red";
@@ -64,6 +63,8 @@ class ConnectFourGame {
             this.cellElements[targetRow]![columnIndex]!.classList.add(this.currentPlayer);
             this.board[targetRow]![columnIndex] = this.currentPlayer;
             this.switchPlayer();
+
+
         }
         
 
@@ -74,6 +75,8 @@ class ConnectFourGame {
         }else{
             this.currentPlayer = "red";
         }
+    }
+    private checkGameStatus(row:number,column:number):{
     }
 }
 const game = new ConnectFourGame();

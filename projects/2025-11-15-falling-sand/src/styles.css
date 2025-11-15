@@ -1,0 +1,29 @@
+body{
+    display:flex;
+    justify-content: center;
+}
+#outerdiv{
+    background-color: darkblue;
+    padding:10px;
+    display:grid;
+    grid-template-columns: repeat(10,1fr);
+}
+.cell{
+    width:40px;
+    height:40px;
+}
+.sand{
+    background-color: yellow;
+}
+.empty{
+    background-color: white;
+}
+.button{
+    color:white;
+    display:flex;
+    justify-content:center;
+}
+.button:hover{
+    color:yellow;
+    cursor:pointer;
+}

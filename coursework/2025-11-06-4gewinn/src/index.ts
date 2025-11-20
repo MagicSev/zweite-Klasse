@@ -7,6 +7,7 @@ class ConnectFourGame {
   private currentPlayer: Player = 'red';
   private board: Cellstate[][] = [];
   private cellElements: HTMLDivElement[][] = [];
+  private gameOver = false;
   private checkPatterns = [
     { x: -1, y: -1 },
     { x: -1, y: 0 },
@@ -63,7 +64,7 @@ class ConnectFourGame {
     }
   }
   private handleColumnClick(columnIndex: number) {
-    if (this.findAvailableRow(columnIndex) >= 0) {
+    if (this.findAvailableRow(columnIndex) >= 0&&!this.gameOver) {
       const targetRow = this.findAvailableRow(columnIndex);
       this.cellElements[targetRow]![columnIndex]!.classList.add(this.currentPlayer);
       this.board[targetRow]![columnIndex] = this.currentPlayer;
@@ -132,14 +133,16 @@ class ConnectFourGame {
             ) {
               console.log(this.currentPlayer);
               return this.currentPlayer;
+              
             }
-          }
         }
-      }
     }
-    return 'empty';
-  }
-  private endgame(color: string) {
+}
+}
+return 'empty';
+}
+private endgame(color: string) {
+      this.gameOver = true;
     for (let y = 0; y < 6; y++) {
       for (let x = 0; x < 7; x++) {
 

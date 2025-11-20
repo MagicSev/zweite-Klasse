@@ -68,5 +68,7 @@ class fallingSandGame{
             }
         }
     }
+
+
 }
 const game = new fallingSandGame();
